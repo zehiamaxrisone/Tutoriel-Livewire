@@ -1,4 +1,10 @@
+@extends('layouts.app')
 
-<h2>
-    Bienvenue Mr {{ auth()->user()->name }}
-</h2>
+
+@section('content')
+    
+    <h2>
+        Bienvenue Mr {{ auth()->user()->name }}
+    </h2>
+
+@endsection

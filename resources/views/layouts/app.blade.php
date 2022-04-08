@@ -10,6 +10,7 @@
 
     <body>
       <div class="container mx-auto px-4">
+        @include('partials.navbar')
         @yield('content')
       </div>
     </body>
