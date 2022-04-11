@@ -39,7 +39,7 @@ class Search extends Component
 
     public function showJob()
     {
-        if($this->jobs)
+        if(count($this->jobs) > 0)
         {
             return redirect()->route('job.show', $this->jobs[$this->selectorindex]['id']);
         }
