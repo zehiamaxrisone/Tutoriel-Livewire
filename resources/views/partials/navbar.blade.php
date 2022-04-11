@@ -3,6 +3,7 @@
     <div>LOGO</div>
 
     <nav class="">
+        @livewire('search')
         <a href="{{ route('job.index') }}" class="mr-5 hover:text-green-500">Nos Missions</a>
         @guest
             <a href="{{ route('login') }}" class="mr-5 hover:text-green-500">Se connecter</a>

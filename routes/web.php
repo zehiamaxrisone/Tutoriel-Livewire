@@ -23,3 +23,4 @@ Route::get('/home', function () {
 })->middleware('auth')->name('home');
 
 Route::get('/job', [JobController::class, 'index'])->name('job.index');
+Route::get('/job{id}', [JobController::class, 'show'])->name('job.show');
