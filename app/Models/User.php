@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Job;
 use App\Models\Role;
+use App\Models\Proposal;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -51,6 +52,11 @@ class User extends Authenticatable
 
     public function jobs() {
         return $this->hasMany(Job::class);
+    }
+
+    public function proposals()
+    {
+        return $this->hasMany(Proposal::class);
     }
 
     public function likes()

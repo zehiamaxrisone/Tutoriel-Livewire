@@ -12,4 +12,13 @@
         <span class="text-sm text-gray-500">{{ number_format($job->price, '2', ',', ' ') }} $</span>
     </div>
 
+    <section x-data="{open : false}">
+        <button class="text-green-500" @click=" open= !open ">Soumettre une candidature</button>
+        <form action="{{ route('proposals.store', $job) }}" class="" x-show="open" x-cloak method="post">
+            @csrf
+            <textarea name="content" id=""  rows="5" class="p-3 font-thin w-full max-w-lg"></textarea>
+            <button type="submit" class="block bg-green-500 text-white px-3 py-2">Soumettre la letter de motivation</button>
+        </form>
+    </section>
+
 @endsection

@@ -10,12 +10,19 @@ class Job extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title', 'description'];
+
     public function scopeOnline($query) {
         return $query->where('status', 1);
     }
 
     public function user() {
         return $this->belongsTo(User::class);
+    }
+
+    public function proposals()
+    {
+        return $this->hasMany(Proposal::class);
     }
 
     public function likes()
